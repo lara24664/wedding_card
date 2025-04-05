@@ -11,366 +11,327 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+    html, body {
+        height: 100vh;
+        overflow: hidden;
+    }
+
     .card {
-    display: flex;
-    width: 95%; /* Adjusts to 90% of the screen width */
-    max-width: 430px; /* Prevents it from exceeding 430px on larger screens */
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 auto; /* Centers the card on the screen */
-	 background: url(https://i.imgur.com/8N9rFb0.png);
-	 position: relative;
-}
-	#aya { 
-    font-size: 1em; /* Increased font size */
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #412649;
-	 text-align: center;
-	}
-	#aya1 { 
-    font-size: 1em; /* Increased font size */
-    letter-spacing: 1px;
-    margin-bottom: 5px;
-    color: #412649;
-	 text-align: center;
-	}
-	#ayle {
-	font-size: 0.75em;
-	}
-	#zafaf {
-	font-size: 0.6em;
-	}
-	.flower {
-    width: 30px; /* Adjust size as needed */
-    display: block;
-    margin: -10px auto 1px; /* Centers the image and adds spacing below */
-    animation: fadeIn 2s ease-in-out;
-	}
-	.left p {
-            font-size: 8px;
-            color: #4a235a;
-            margin: 5px 0;
-    }
-.left {
-    width: 0;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: width 1.5s ease-in-out;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.card.expand-left .left {
-    width: 100%;
-}
-
-.card.expand-left .right {
-    width: 0;
-    opacity: 0;
-}
-	.left h1 {
-            font-size: 13px;
-            margin: 0;
-            color: #4a235a;
-    }
-	.date-box {
-         /*   background: #d6cbd3;*/
-			width: 280px;
-			 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border: 1px solid #fdf8f6;
-            color: white;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 3px;
-    }
-	.date-box {
-            display: flex;
-            justify-content: space-around;
-           
-          /*  background: #d6cbd3;*/
-            padding: 10px;
-            border-radius: 10px;
-            margin: 5px 0;
-            animation: zoomIn 2s ease-in-out;
-			color: #412649;
-    }
-	.date-box div {
-            font-size: 0.8em;
-            font-weight: bold;
-	}
-	.alighinanames {
-    width: 140px; /* Adjust size as needed */
-	/*height: auto; */
-    display: block;
-    margin: 0 auto 10px; /* Centers the image and adds spacing below */
-    animation: fadeIn 2s ease-in-out;
-	}
-	.sala {
-	width: 80px;
-	 margin: 0 auto 0.5px; 
-	}
-	.location-link {
-           font-size: 1em;
-       /*     background: #d6cbd3;*/
-            color: #4a235a;
-            padding: 2px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 2px;
-            animation: fadeIn 3s ease-in-out;
-    }
-	.location-link:hover {
-            background-color: #d4c2d3;
-    }
-	.countdown {
-            font-size: 1em;
-            background: #d6cbd3;
-            color: white;
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            margin-top: 5px;
-            animation: fadeIn 3s ease-in-out;
-    }
-	.form-container {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
-    }
-    label {
-            font-size: 16px;
-            color: #4a235a;
-            font-weight: bold;
-    }
-	 input {
-            width: 30%;
-            padding: 8px;
-            border: 2px solid #b395c8;
-            border-radius: 5px;
-            margin-top: 5px;
-            text-align: center;
-            font-size: 6px;
-    }
-        button {
-        /*    background: #a586a6;*/
-            color: #4a235a;
-            border: none;
-            padding: 7px 12px;
-            border-radius: 1px;
-            cursor: pointer;
-            font-size: 30px;
-		margin-bottom: 20px;
-        }
-        button:hover {
-            background: #c2a3c2;
-        }
-        .counter-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 10px;
-        }
-        .counter-container button {
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            font-size: 8px;
-            line-height: 1;
-        }	
-		
-
-.right {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    background-color: #000;
-    position: relative;
-    transition: width 1.5s ease-in-out, opacity 1.5s ease-in-out;
-}
-
-.right img {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-@keyframes shrinkImage {
-    0% {
-        width: 10%;
-        height: 100vh; /* Full-screen */
-    }
-    100% {
-        width: 150%;
-        height: 100%;
-    }
-}
-
-@keyframes disappearRight {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-/* Keyframe for the shadow effect */
-@keyframes fadeToShadow {
-    0% {
-        filter: brightness(1);
-    }
-    100% {
-        filter: brightness(0.3); /* Makes the image dark as a shadow */
-    }
-}
-.card.expand-left .right img {
-            filter: brightness(0.3); /* Makes the image dark as a shadow */
-        }
-		/* Expanding the left section */
-        .card.expand-left .left {
-            width: 100%;
-        }
-	   .countdown-container {
-          /*  background: #fdf8f6;*/
-            border-radius: 5px;
-            padding: 1px;
-            width: 140px; /* Small width */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            border: 1px solid #fdf8f6;
-            position: relative;
-            margin: 30px auto;
-            font-size: 8px;
-        }
-
-        .countdown-title {
-            font-size: 10px;
-            font-weight: bold;
-            color: #412649;
-            margin-bottom: 5px;
-			text-align: center;
-			align-items: center;
-        }
-
-        .countdownnew {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .countdown div {
-         /*   background: #7c5d7f;*/
-            padding: 3px;
-            border-radius: 3px;
-            width: 20px;
-            text-align: center;
-            font-size: 10px;
-        }
-
-        .label {
-            display: flex;
-            justify-content: space-between;
-            font-size: 7px;
-            color: #412649;
-            margin-top: 3px;
-        }
-
-        .labels div {
-            width: 18px;
-            text-align: center;
-        }
-	 .form-group {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 16px;
+        width: 95%; /* Adjusts to 90% of the screen width */
+        max-width: 430px; /* Prevents it from exceeding 430px on larger screens */
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 auto; /* Centers the card on the screen */
+        background: url(https://i.imgur.com/8N9rFb0.png);
+        position: relative;
+        height: 100vh; /* Make the card take the full height of screen */
+        flex-direction: row;
     }
 
+    .left {
+        height: 100vh;
+        overflow-y: auto; /* In case needed for very small screens */
+        padding: 10px 5px; /* small padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+	#aya { 
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: #412649;
+        text-align: center;
+	}
+
+	#aya1 { 
+        font-size: 1em;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: #412649;
+        text-align: center;
+	}
+
+	#ayle {
+        font-size: 0.75em;
+	}
+
+	#zafaf {
+        font-size: 0.6em;
+	}
+
+	.flower {
+        width: 30px;
+        display: block;
+        margin: -10px auto 1px;
+        animation: fadeIn 2s ease-in-out;
+	}
+
+    .left h1 {
+        font-size: 13px;
+        margin: 0;
+        color: #4a235a;
+    }
+
+    .date-box {
+        width: 280px;
+        padding: 10px;
+        border-radius: 10px;
+        margin: 5px 0;
+        color: #412649;
+        background: #d6cbd3;
+        animation: zoomIn 2s ease-in-out;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .date-box div {
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+
+    .alighinanames {
+        width: 140px;
+        display: block;
+        margin: 0 auto 10px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .sala {
+        width: 80px;
+        margin: 0 auto 0.5px; 
+    }
+
+    .location-link {
+        font-size: 1em;
+        color: #4a235a;
+        padding: 2px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 2px;
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    .location-link:hover {
+        background-color: #d4c2d3;
+    }
+
+    .countdown {
+        font-size: 1em;
+        background: #d6cbd3;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        margin-top: 5px;
+        animation: fadeIn 3s ease-in-out;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.8);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    label {
+        font-size: 16px;
+        color: #4a235a;
+        font-weight: bold;
+    }
+
+    input {
+        width: 30%;
+        padding: 8px;
+        border: 2px solid #b395c8;
+        border-radius: 5px;
+        margin-top: 5px;
+        text-align: center;
+        font-size: 6px;
+    }
+
+    button {
+        color: #4a235a;
+        border: none;
+        padding: 7px 12px;
+        border-radius: 1px;
+        cursor: pointer;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    button:hover {
+        background: #c2a3c2;
+    }
 
     .counter-container {
         display: flex;
         align-items: center;
-        gap: 5px;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
     }
 
     .counter-container button {
-        width: 25px;
-        height: 25px;
-        font-size: 14px;
-        cursor: pointer;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        font-size: 8px;
+        line-height: 1;
     }
 
-    .counter-container input {
-        width: 30px;
-        text-align: center;
-        font-size: 14px;
-        border: none;
-        background: #f5f5f5;
-    }
-
-    .button-container {
+    .right {
+        width: 100vw;
+        height: 100vh;
         display: flex;
         justify-content: center;
-        gap: 10px;
-        margin-top: 5px;
+        align-items: center;
+        overflow: hidden;
+        background-color: #000;
+        position: relative;
+        transition: width 1.5s ease-in-out, opacity 1.5s ease-in-out;
     }
 
-    .button-container button {
-        font-size: 14px;
-        padding: 5px 10px;
-    }	
-	 .label1 {
-        font-size: 16px;
-        white-space: nowrap;
+    .right img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 1.5s ease-in-out;
     }
-	 #guestCount {
-        width: 50px;
-        text-align: center;
-        font-size: 14px;
-        border: 1px solid #ccc;
+
+    @keyframes shrinkImage {
+        0% {
+            width: 10%;
+            height: 100vh; /* Full-screen */
+        }
+        100% {
+            width: 150%;
+            height: 100%;
+        }
+    }
+
+    @keyframes disappearRight {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeToShadow {
+        0% {
+            filter: brightness(1);
+        }
+        100% {
+            filter: brightness(0.3); /* Makes the image dark as a shadow */
+        }
+    }
+
+    .card.expand-left .right img {
+        filter: brightness(0.3); /* Makes the image dark as a shadow */
+    }
+
+    .card.expand-left .left {
+        width: 100%;
+    }
+
+    .countdown-container {
         border-radius: 5px;
-        padding: 5px;
+        padding: 1px;
+        width: 140px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        border: 1px solid #fdf8f6;
+        position: relative;
+        margin: 30px auto;
+        font-size: 8px;
     }
-			.phone {
+
+    .countdown-title {
+        font-size: 10px;
+        font-weight: bold;
+        color: #412649;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .countdownnew {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .countdown div {
+        padding: 3px;
+        border-radius: 3px;
+        width: 20px;
+        text-align: center;
+        font-size: 10px;
+    }
+
+    .label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 7px;
+        color: #412649;
+        margin-top: 3px;
+    }
+
+    .labels div {
+        width: 18px;
+        text-align: center;
+    }
+
+    .phone {
         display: flex;
         align-items: center;
-        gap: 10px; /* Adjust spacing between phone and text */
-	margin: 10px auto;
+        gap: 10px;
+        margin: 10px auto;
     }
-	.phone-input {
-    display: flex;
-    align-items: center; /* Aligns the items vertically in the middle */
-}
 
-.phone-input svg {
-    margin-right: 10px; /* Adds some space between the icon and the phone number */
-}
+    .phone-input {
+        display: flex;
+        align-items: center;
+    }
 
-.phone-input p {
-    margin: 0; /* Removes any default margin that might cause spacing issues */
-}
-	.aya3 {
+    .phone-input svg {
+        margin-right: 10px;
+    }
+
+    .phone-input p {
+        margin: 0;
+    }
+
+    .aya3 {
         font-size: 6px;
         color: #555;
         margin: 0;
     }
+
+    @media screen and (max-height: 700px) {
+        .countdown-container,
+        .button-container,
+        .phone {
+            transform: scale(0.85);
+        }
+
+        .left h1 {
+            font-size: 12px;
+        }
+    }
+
 	</style>
 </head>
 <body>
